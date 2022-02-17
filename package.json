@@ -1,0 +1,25 @@
+{
+  "name": "a03-sningle",
+  "version": "1.0.0",
+  "description": "Building an API for flipping coins.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/comp426-2022-spring/a03-sningle.git"
+  },
+  "author": "Savannah Ingle",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a03-sningle/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a03-sningle#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "minimist": "^1.2.5"
+  }
+}
