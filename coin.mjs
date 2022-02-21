@@ -110,3 +110,5 @@ function flipACoin(call) {
     return final_results;
   }
 }
+
+/** question of the day: is the autograder up yet? */
