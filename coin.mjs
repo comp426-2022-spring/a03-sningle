@@ -111,4 +111,4 @@ function flipACoin(call) {
   }
 }
 
-/** question of the day: is the autograder up yet? */
+/** question of the day: is the autograder up yet? The answer was no */
