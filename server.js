@@ -50,8 +50,9 @@ app.get('/app/flip/call/tails/', (req, res) => {
 
 app.use(function(req, res){
     res.statusCode = 404;
-    res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
-    res.status(404).send("404 NOT FOUND")
+    res.statusMessage = 'NOT FOUND'
+    //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
+    res.status(statusCode).end(statusCode + ' ' + statusMessage)
 });
 
 const server = app.listen(port, () => {
