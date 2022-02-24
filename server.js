@@ -22,28 +22,28 @@ app.get('/app/', (req, res) => {
 
 app.get('/app/flip/', (req, res) => {
     res.statusCode = 200;
-    res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
+    //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     res.send('{"flip":"' + coinFlip() + '"}');
 })
 
-app.get('/app/flips/:number', (req, res) => {
+app.get('/app/flips/:number/', (req, res) => {
     res.statusCode = 200;
-    res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
+    //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     const flip_array = coinFlips(req.params.number);
     const sum = countFlips(flip_array)
     res.send('{"raw":\n[' + flip_array + '],"summary":{tails":' + sum.get("tails") + ',"heads":' + sum.get("heads") + '}}')
 })
 
-app.get('/app/flip/call/heads', (req, res) => {
+app.get('/app/flip/call/heads/', (req, res) => {
     res.statusCode = 200;
-    res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
+    //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     const map = flipACoin("heads");
     res.send('{"call":"' + map.get("call") + '","flip":"' + map.get("flip") + '","result":"' + map.get("result") + " }")
 })
 
-app.get('/app/flip/call/tails', (req, res) => {
+app.get('/app/flip/call/tails/', (req, res) => {
     res.statusCode = 200;
-    res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
+    //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     const map = flipACoin("tails");
     res.send('{"call":"' + map.get("call") + '","flip":"' + map.get("flip") + '","result":"' + map.get("result") + " }")
 })
