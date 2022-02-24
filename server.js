@@ -38,14 +38,14 @@ app.get('/app/flip/call/heads/', (req, res) => {
     res.statusCode = 200;
     //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     const map = flipACoin("heads");
-    res.send('{"call":"' + map.get("call") + '","flip":"' + map.get("flip") + '","result":"' + map.get("result") + " }")
+    res.send('{"call":"' + map.get("call") + '","flip":"' + map.get("flip") + '","result":"' + map.get("result") + '" }')
 })
 
 app.get('/app/flip/call/tails/', (req, res) => {
     res.statusCode = 200;
     //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     const map = flipACoin("tails");
-    res.send('{"call":"' + map.get("call") + '","flip":"' + map.get("flip") + '","result":"' + map.get("result") + " }")
+    res.send('{"call":"' + map.get("call") + '","flip":"' + map.get("flip") + '","result":"' + map.get("result") + '" }')
 })
 
 app.use(function(req, res){
