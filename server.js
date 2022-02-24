@@ -31,7 +31,7 @@ app.get('/app/flips/:number/', (req, res) => {
     //res.writeHead(res.statusCode, {"Content-Type" : "text/plain"});
     const flip_array = coinFlips(req.params.number);
     const sum = countFlips(flip_array)
-    res.send('{"raw":[' + flip_array + '],"summary":{tails":' + sum.get("tails") + ',"heads":' + sum.get("heads") + '}}')
+    res.send('{"raw":[' + flip_array + '],"summary":{"tails":' + sum.get("tails") + ',"heads":' + sum.get("heads") + '}}')
 })
 
 app.get('/app/flip/call/heads/', (req, res) => {
