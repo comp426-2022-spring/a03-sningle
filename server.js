@@ -57,3 +57,5 @@ app.use(function(req, res){
 const server = app.listen(port, () => {
     console.log("App listening on port " + port)
 })
+
+// autograder is up woooo
