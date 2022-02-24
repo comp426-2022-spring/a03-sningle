@@ -43,7 +43,7 @@ function coinFlips(flips) {
   const flip_array = [];
   var i = 0;
   while (i < flips) {
-    flip_array.push(coinFlip())
+    flip_array.push('"' + coinFlip() + '"')
     i++;
   }
   return flip_array;
